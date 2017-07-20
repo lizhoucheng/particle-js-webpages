@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type='text/javascript'
+  src='http://code.jquery.com/jquery-2.0.2.js'></script>
+<link rel='stylesheet' type='text/css'
+  href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'>
+<script type='text/javascript'
+  src='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js'></script>
+<link rel='stylesheet' type='text/css'
+  href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css'>
+    <script src='https://cdn.jsdelivr.net/particle-api-js/5/particle.min.js' type='text/javascript'></script>
+<!--    <script src='login.js' type='text/javascript'>showToken()</script>-->
+    <script src='javascripts/actions.js' type='text/javascript'></script>
+<script type='text/javascript'>//<![CDATA[ 
+  
+</script>
+</head>
+<body>
+  <table id='myTable' class='table table-hover'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>connected</th>
+        <th>id</th>
+        <th>status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id='name'></td>
+            <td id='connected'></td>
+            <td id='device_id' class='id'></td>
+            <td id='status'></td>
+            <td class='dropdown'><a class='btn btn-default actionButton'
+              data-toggle='dropdown' href='#'> Action </a></td>
+        </tr>
+<!--        <tr>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td class='dropdown'><a class='btn btn-default actionButton'
+              data-toggle='dropdown' href='#'> Action </a></td>
+        </tr>-->
+    </tbody>
+  </table>
+  <ul id='contextMenu' class='dropdown-menu' role='menu'>
+    <li><a tabindex='-1' href='tinker.html' class='tinker'>Tinker</a></li>
+      <li><a tabindex='-1'  class='renameButton' onclick='Rename'>Rename</a></li>
+    <li><a tabindex='-1' href='#' class='delLink'>Delete</a></li>
+      <li><a tabindex='-1'  class='signalButton'>Signal</a></li>
+  </ul>
+ 
+</body>
+</html>

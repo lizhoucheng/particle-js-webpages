@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Particle Device</title></head>
+    <script src='https://cdn.jsdelivr.net/particle-api-js/5/particle.min.js' type='text/javascript'></script>
+    <script src='../javascripts/login.js' type='text/javascript'>showToken()</script>
+    <body onload='ShowDevice()'>
+        <!--<h1>Device List</h1>
+        <h2 id='token'></h2>-->
+        <table style='width:100%'>
+            <caption>Device List</caption>
+            <tr>
+                <th>Name</th>
+                <th>connected</th>
+                <th>id</th>
+                <th>status</th>
+            </tr>
+            <tr>
+                <th id='name'></th>
+                <th id='connected'></th>
+                <th id='device_id'></th>
+                <th id='status'></th>
+                <th><a href='tinker.html'>tinker</a></th>
+            </tr>
+        </table>
+    </body>
+    
+</html>
