@@ -1,6 +1,7 @@
 var particle = new Particle();
 var id = localStorage.getItem('device_id');
 var token = localStorage.getItem('token');
+var connected = localStorage.getItem('device_connected');
 
 /*function Rename(){
     var newName = prompt('Enter a new name: ','your name here');
@@ -44,6 +45,12 @@ $('.actionButton').click(function() {
     .find('.id')
     .html();
     localStorage.setItem('device_id',id);
+    //get status of being connected
+    var connected = $(this)
+    .closest('tr')
+    .find('.connected')
+    .html();
+    localStorage.setItem('device_connected',connected);
     //move dropdown menu
     $(this).after($dropdown);
     //update links
@@ -60,6 +67,12 @@ $('.actionButton').on('tap',function() {
     .find('.id')
     .html();
     localStorage.setItem('device_id',id);
+    //get status of being connected
+    var connected = $(this)
+    .closest('tr')
+    .find('.connected')
+    .html();
+    localStorage.setItem('device_connected',connected);
     //move dropdown menu
     $(this).after($dropdown);
     //update links
@@ -97,13 +110,17 @@ $('.renameButton').on('tap',function(){
             alert('errors');
         });
     }
-})
+});
 
-$('.signalButton').click(function(){
+$('.tinkerButton').on('tap',function(){
+    window.location.href = "http://stackoverflow.com";
+});
+                          
+$('.signalButton').on('tap',function(){
     particle.signalDevice({ deviceId: id, signal: false, auth: token }).then(function(data) {
       console.log('Device is shouting rainbows:', data);
     }, function(err) {
       console.log('Error sending a signal to the device:', err);
     });
-})
+});
 });//]]>
