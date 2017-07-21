@@ -27,10 +27,10 @@ $dropdown = $('#contextMenu');
     devicesPr.then(
       function(devices){
         console.log('Devices: ', devices);
-        document.getElementById('name').innerHTML=devices.body[0].name;
-        document.getElementById('connected').innerHTML=devices.body[0].connected;
-        document.getElementById('device_id').innerHTML=devices.body[0].id;
-        document.getElementById('status').innerHTML=devices.body[0].status;
+        document.getElementById('name1').innerHTML=devices.body[0].name;
+        document.getElementById('connected1').innerHTML=devices.body[0].connected;
+        document.getElementById('id1').innerHTML=devices.body[0].id;
+        document.getElementById('status1').innerHTML=devices.body[0].status;
       },
       function(err) {
         console.log('List devices call failed: ', err);
