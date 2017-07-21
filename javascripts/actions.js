@@ -113,6 +113,7 @@ $('.renameButton').on('tap',function(){
 });
 
 $('.tinkerButton').on('tap',function(){
+    alert(connected);
     window.location.href = "http://stackoverflow.com";
 });
                           
