@@ -65,6 +65,19 @@ $('.renameButton').click(function(){
         alert('errors');
     });
 })
+                          
+$('.renameButton').on('tap',function(){
+    var newName = prompt('Enter a new name: ','your name here');
+    
+    particle.renameDevice({deviceId:id, name:newName, auth:token}).then(function(data){
+        console.log('Device renamed successfully:', data);
+        alert('Done');
+        location.reload();
+    },function(err){
+        console.log('An error occurred while renameing device: ',err);
+        alert('errors');
+    });
+})
 
 $('.signalButton').click(function(){
     particle.signalDevice({ deviceId: id, signal: false, auth: token }).then(function(data) {
