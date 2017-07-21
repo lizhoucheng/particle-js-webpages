@@ -113,8 +113,10 @@ $('.renameButton').on('tap',function(){
 });
 
 $('.tinkerButton').on('tap',function(){
-    alert(connected);
-    window.location.href = "http://stackoverflow.com";
+    if(connected==='true')
+        window.location.href = "tinker.html";
+    else
+        alert('please connecte the device first, and then refresh the page');
 });
                           
 $('.signalButton').on('tap',function(){
