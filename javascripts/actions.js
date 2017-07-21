@@ -53,6 +53,22 @@ $('.actionButton').click(function() {
     $(this).dropdown();
 });
 
+$('.actionButton').on('tap',function() {
+    //get row ID
+    var id = $(this)
+    .closest('tr')
+    .find('.id')
+    .html();
+    localStorage.setItem('device_id',id);
+    //move dropdown menu
+    $(this).after($dropdown);
+    //update links
+    //$dropdown.find('.Tinker').attr('href', '/transaction/pay?id='+id);
+    //$dropdown.find('.delLink').attr('href', '/transaction/delete?id='+id);
+    //show dropdown
+    $(this).dropdown();
+});
+
 $('.renameButton').click(function(){
     var newName = prompt('Enter a new name: ','your name here');
     
