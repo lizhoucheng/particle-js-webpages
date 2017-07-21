@@ -9,7 +9,7 @@ function Login(){
             token = result.body.access_token;
             console.log('Your access token', result.body.access_token);
             localStorage.setItem('token',token);
-            window.location = 'device_list_test.html';
+            window.location = 'device_list.html';
     }, function(err) {
             alert('username/password invalid');
     });
