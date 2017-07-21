@@ -75,7 +75,7 @@ $('.renameButton').click(function(){
     if(newName !==""){
         particle.renameDevice({deviceId:id, name:newName, auth:token}).then(function(data){
             console.log('Device renamed successfully:', data);
-            alert('Done');
+            alert(newName);
             location.reload();
         },function(err){
             console.log('An error occurred while renameing device: ',err);
