@@ -113,10 +113,12 @@ $('.renameButton').on('tap',function(){
 });
 
 $('.tinkerButton').on('tap',function(){
-    if(connected==='true')
+    if(connected=='true')
         window.location.href = "tinker.html";
-    else
+    else{
+        alert(connected);
         alert('please connecte the device first, and then refresh the page');
+    }
 });
                           
 $('.signalButton').on('tap',function(){
